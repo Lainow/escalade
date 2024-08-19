@@ -3,6 +3,7 @@
         "php": ">=7.4"
     },
     "require-dev": {
+        "consolidation/robo": "^4.0",
         "glpi-project/tools": "^0.7.3",
         "php-parallel-lint/php-parallel-lint": "^1.4",
         "phpstan/extension-installer": "^1.4",
@@ -19,5 +20,13 @@
         "allow-plugins": {
             "phpstan/extension-installer": true
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "pip3 install --user transifex-client"
+        ],
+        "post-update-cmd": [
+            "pip3 install --user transifex-client"
+        ]
     }
 }
